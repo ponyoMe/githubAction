@@ -5,11 +5,13 @@ on:
 
 jobs:
   greet:
+    env:
+        MY_ENV: "Jonh Doe"
     runs-on: ubuntu-latest
     steps:
       - name: Greet the User
-        run: echo "Hello World!"
-        
+        run: echo "Hello $MY_ENV"
+            
       - name: List files in the current directory
         run: ls -l
 
